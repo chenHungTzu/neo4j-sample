@@ -1,3 +1,4 @@
+BEGIN
 DECLARE @NAME NVARCHAR(30) = N'某發展群A';
 
 WITH CTE(NodeID, ParentNodeID, [Name] ,[Level]) AS   
@@ -26,3 +27,4 @@ WHERE ParentNodeID = (
 						WHERE [NAME] = @NAME
 					 )
 ORDER BY [Level] 
+END
