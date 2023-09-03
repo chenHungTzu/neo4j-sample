@@ -1,4 +1,4 @@
-DECLARE @NAME NVARCHAR(30) = N'¬Yµo®i¸sA';
+DECLARE @NAME NVARCHAR(30) = N'æŸç™¼å±•ç¾¤A';
 
 WITH CTE(NodeID, ParentNodeID, [Name] ,[Level]) AS   
 (  
