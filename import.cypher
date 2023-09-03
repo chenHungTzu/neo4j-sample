@@ -1,5 +1,5 @@
 // 匯入資料
-LOAD CSV WITH HEADERS FROM 'file:///node-data.csv' AS line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/chenHungTzu/rel-sample/master/node-data.csv' AS line
 CREATE (:Org {NodeID: toInteger(line.NodeID), ParentID: toInteger(line.ParentID) , Name : line.Name})
 
 // 拉上關聯
