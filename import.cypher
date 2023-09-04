@@ -97,10 +97,10 @@ RETURN page
 // 找到使用者頁面 (所有關聯都啟用的)
 MATCH (user:User{Name:"政彥"}) --> (org:Org) - [:Has*]-> (org2:Org)
 MATCH (org) - [c:Ctrl] - (p:Page)
-MATCH (org2) - [c2:Ctrl] - (p2:Page)
 WHERE c.Effect IS NULL
-AND c2.Effect IS NULL
-RETURN p,org
+MATCH (org2) - [c2:Ctrl] - (p2:Page)
+WHERE c2.Effect IS NULL
+RETURN user,org,org2,p,p2
 
 
 // 建立資料內容 (案件)
